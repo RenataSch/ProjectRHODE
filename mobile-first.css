@@ -1,0 +1,181 @@
+/* Reset e estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Corpo e fundo */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.menu {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    display: block;
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.menu-toggle {
+    display: block; /* Apenas visível em dispositivos móveis */
+}
+
+/* Seção de banner */
+.banner {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fff;
+}
+
+.banner img {
+    max-width: 90%;  /* Diminui a largura da primeira imagem */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilização da seção de produtos */
+.produtos {
+    background-color: #ffffff;
+    padding: 30px 20px;
+}
+
+.produtos h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.produtos ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produtos ul li {
+    background-color: #fff;
+    width: 80%; /* Para telas pequenas, ocupando 80% da largura */
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.produtos ul li:hover {
+    transform: translateY(-5px);
+}
+
+.produtos h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.produtos p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.produtos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ajusta para cobrir sem distorcer */
+    margin-bottom: 15px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+    color: #777;
+}
+
+/* Estilos para telas maiores - Tablets */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .menu ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    .produtos h2 {
+        font-size: 2rem;
+    }
+
+    .produtos ul li {
+        width: 45%; /* Para telas maiores, os produtos ocupam 45% da largura */
+    }
+}
+
+/* Estilos para telas ainda maiores - Desktop */
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .produtos ul {
+        justify-content: space-evenly; /* Distribui igualmente os itens */
+    }
+
+    .produtos ul li {
+        width: 22%; /* No desktop, cada produto ocupa 22% da largura */
+    }
+
+    .produtos h3 {
+        font-size: 1.4rem;
+    }
+
+    .produtos p {
+        font-size: 1.1rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}

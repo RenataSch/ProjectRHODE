@@ -1,0 +1,211 @@
+/* Reset e estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Corpo e fundo */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul {
+    display: flex;
+    gap: 30px;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.menu-toggle {
+    display: none; /* Apenas visível em dispositivos móveis */
+}
+
+/* Seção de banner */
+.banner {
+    text-align: center;
+    padding: 50px 40px;
+    background-color: #fff;
+}
+
+.banner img {
+    max-width: 80%;  /* Ajustando a largura da imagem no desktop */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Estilização da seção de produtos */
+.produtos {
+    background-color: #ffffff;
+    padding: 50px 40px;
+}
+
+.produtos h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.produtos ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.produtos ul li {
+    background-color: #fff;
+    width: 22%; /* Para telas grandes, cada item ocupa 22% da largura */
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.produtos ul li:hover {
+    transform: translateY(-5px);
+}
+
+.produtos h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.produtos p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.produtos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+    color: #777;
+    font-size: 1rem;
+}
+
+/* Media Queries para telas menores */
+
+/* Para tablets (largura mínima de 768px) */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .menu ul {
+        gap: 20px;
+    }
+
+    .produtos h2 {
+        font-size: 1.6rem;
+    }
+
+    .produtos ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produtos ul li {
+        width: 80%;  /* Para tablets, cada item ocupa 80% da largura */
+        margin-bottom: 30px;
+    }
+
+    .produtos img {
+        height: 180px;
+    }
+}
+
+/* Para smartphones (largura mínima de 320px) */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .menu {
+        display: none; /* O menu de navegação é escondido em smartphones */
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .produtos h2 {
+        font-size: 1.4rem;
+    }
+
+    .produtos ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produtos ul li {
+        width: 90%; /* Para smartphones, cada item ocupa 90% da largura */
+        margin-bottom: 30px;
+    }
+
+    .produtos img {
+        height: 180px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
